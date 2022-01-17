@@ -1,5 +1,5 @@
 # Problems with Theme
-A bunch of chess puzzles solved 
+The following list shows famous problems with one theme in common that is the algorithm used for their solution 
 
 **All solved using backtracking**
 1. N Queen Problem 
