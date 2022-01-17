@@ -1,4 +1,4 @@
-# Chess-Puzzlings
+# Problems with Theme
 A bunch of chess puzzles solved 
 
 **All solved using backtracking**
