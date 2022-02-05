@@ -22,8 +22,40 @@ void printSolution(int sol[N][N]){
   
 }
 
+/*This function solves the Knight Tour problem using
+Backtracking. This function mainly uses solveKTUtil()
+to solve the problem. It returns false if no complete
+tour is possible, otherwise return true and prints the
+tour.
+Please note that there may be more than one solutions, 
+this function prints one of the feasible solutions.*/
 
+int solveKT(){
+  int sol[N][N];
+  
+  //Initialization of solutions of matrix
+  for(int x = 0; x < N; x++)
+    for(int y = 0; y < N; y++)
+      sol[x][y] = -1;
 
-
+  /* xMove[] and yMove[] define next move of Knight.
+    xMove[] is for next value of x coordinate
+    yMove[] is for next value of y coordinate */
+  int xMove[8] = {2, 1, -1, -2, -2, -1, 1, 2};
+  int yMove[8] = {1, 2, 2, 1, -1, -2, -2, -1};
+  
+  //Starting position of knight
+  sol[0][0] = 0;
+  
+  if(solveKTUtil(0, 0, 1, sol, xMove, yMove) == 0){
+    cout << "Solution does not exist";
+    return 0;
+  }
+  else{
+    printSolution(sol);
+  }
+      
+return 1;
+}
 
 
