@@ -58,4 +58,45 @@ int solveKT(){
 return 1;
 }
 
+//A recursive utility function to solve the Knight's Tour problem
+int solveKTUtil(int x, int y, int movei, int sol[N][N], int xMove[8], int yMove[8]){
+  int k, next_x, next_y;
+  if(movei == N * N){
+    return 1;
+  }
+  
+  
+  for(k = 0; k < 8; k++){
+    next_x = x + xMove[k];
+    next_y = y + yMove[k];
+    if(isSafe(next_x, next_y, sol)){
+      sol[next_x][next_y] = movei;
+      if(solveKTUtil(next_x, next_y, movei + 1, sol, xMove, yMove) == 1){
+        return 1;
+      }
+      else{
+        //backtracking occurs
+        sol[next_x][next_y] = -1;
+        
+      }
+       
+    }
+    
+  }
+    
+  return 0;
+ }
+
+int main(){
+   solveKT();
+  return 0;
+}
+  
+
+
+
+
+
+
+
 
