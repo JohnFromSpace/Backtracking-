@@ -12,5 +12,24 @@ void printSubset(int A[], int size){
   cout << "\n";
 }
 
+//qsort compare function
+int comparator(const void *pLhs, const void *pRhs){
+  int *lhs = (int *) pLhs;
+  int *rhs = (int *) pRhs;
+  return *lhs > *rhs;
+}
+  
+// inputs
+// s            - set vector
+// t            - tuplet vector
+// s_size       - set size
+// t_size       - tuplet size so far
+// sum          - sum so far
+// ite          - nodes count
+// target_sum   - sum to be found
+
+
+
+
 
 
