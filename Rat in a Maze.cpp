@@ -61,29 +61,29 @@ bool solveMaze(int maze[N][N], int x, int y, sol[N][N]){
       return true;
     }
     
-    
     //If moving in x direction does not give a solution, then move down in the y direction
+    if(solveMaze(maze, x, y + 1, sol) == true){
+      return true;
+    }
     
-    
-    
-    
+    //If none of the above movements work then backtrack: unmark x, y as part of solution path
+    sol[x][y] = 0;
+    return false;
       
   }
   
+  return false;
+  
 }
 
+int main(){
+  int maze[N][N] = {{1, 0, 0, 0}, 
+                    {1, 1, 0, 1}, 
+                    {0, 1, 0, 0},
+                    {1, 1, 1, 1}};
 
-
-
-
-    
- 
-    
+  solveMaze(maze);
+  return 0;
   
-
-
-
-
-
-
+}
 
