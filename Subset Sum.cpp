@@ -4,7 +4,7 @@ using namespace std;
 #define ARRAYSIZE(a) (sizeof(a)/sizeof(a[0]))
 static int total_nodes
 
-//prints subset found
+//Prints subset found
 void printSubset(int A[], int size){
   for(int i = 0; i < size; i++){
     cout << " " << A[i]; 
@@ -12,7 +12,7 @@ void printSubset(int A[], int size){
   cout << "\n";
 }
 
-//qsort compare function
+//Qsort compare function
 int comparator(const void *pLhs, const void *pRhs){
   int *lhs = (int *) pLhs;
   int *rhs = (int *) pRhs;
@@ -67,9 +67,49 @@ void subset_sum(int s[], int t[], int size_t, int s_size, int t_size, int sum, i
 
 //Wrapper that prints subsets that sum to target_sum
 void generateSubsets(int s[], int size, int target_sum){
-
-
+  int *tuplet_vector = (int *)malloc(size * sizeof(int));
+  int total = 0;
+  
+  //Sort the set
+  qsort(s, size, sizeof(int), &comparator);
+  for(int i = 0; i < size; i++){
+    total += s[i];
+  }
+  
+  if(s[0] <= target_sum && total >= target_sum){
+     subset_sum(s, tuplet_vector, size, 0, 0, 0, target_sum);
+  }
+  free(tuplet_vector);
 }
+
+int main(){
+  int weights[] = {15, 22, 14, 26, 32, 9, 16, 8};
+  int target 53;
+  int size = ARRAYSIZE(weights);
+  generateSubsets(weights, size, target);
+  cout << "Nodes generated: " << total_nodes;
+  
+  return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
