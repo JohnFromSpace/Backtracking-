@@ -33,19 +33,9 @@ class Graph:
       return True
       
       
-
+#Main
+g = Graph(4)
+g.graph = [ [0, 1, 1, 1], [1, 0, 1, 0] [1, 1, 0, 1] [1, 0, 1, 0]]
+m = 3
+g.graphColoring(m)
     
-    
-        
-  
-        
-        
-        
-        
-        
-        
-        
-        
-        
-      
-
