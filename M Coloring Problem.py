@@ -11,6 +11,29 @@ class Graph:
           return False
       return True
     
+    def graphColorUtil(self, m color, v):
+      if v == self.V:
+        return True
+      
+      for c in range(1, m + 1):
+        if self.isSafe(v, color, c) == True:
+          color[v] = c
+          if self.graphColorUtil(m, color, v + 1) == True:
+            return True
+          color[v] = 0
+          
+    def graphColoring(self, m):
+      color = [0] * self.V
+      if self.graphColorUtil(m, color, 0) == None:
+        return False
+      
+      print("Solution exist and Following are the assigned colours: ")
+      for c in color: 
+        print(c, end = ' ')
+      return True
+      
+      
+
     
     
         
