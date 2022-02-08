@@ -66,8 +66,38 @@ bool graphColoring(bool graph[V][V], int m){
   return true;
 }
       
-      
-      
+void printSolution(int color[]){
+  
+  cout << "Solution Exists: " << "Following are assigned colors" << "\n";
+  
+  for(int i = 0; i < V; i++){
+    cout << " " << color[i] << " ";
+  }
+  
+  cout << "\n";
+  
+}      
+  
+int main(){
+  /*Create following graph
+  
+  (3)---(2)
+   |   / |
+   |  /  |
+   | /   |
+  (0)---(2)
+  
+  */
+  
+  bool graph[V][V] = {{0, 1, 1, 1},
+                      {1, 0, 0, 1},
+                      {1, 1, 0, 1},
+                      {1, 0, 1, 0}};
+  
+  int m = 3;
+  graphColoring(graph, m);
+  return 0;
+}      
       
 
 
