@@ -48,7 +48,26 @@ bool graphColoringUtil(bool graph[V][V], int m, int color[], int v){
 
 //The following function provides us with the more feasible solutions, considering there
 //are many more solutions.
-
+bool graphColoring(bool graph[V][V], int m){
+  
+  //Initialize all color values as 0
+  //This initialization is needed correct functioning of isSafe()
+  int color[V];
+  for(int i = 0; i < V; i++){
+    color[i] = 0;
+  }
+  
+  if(graphColorUtil(graph, m, color, 0) == false){
+    cout << "Solution does not exist.";
+    return false;
+  }
+  
+  printSolution(color);
+  return true;
+}
+      
+      
+      
       
 
 
