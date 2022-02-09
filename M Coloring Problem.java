@@ -54,15 +54,20 @@ public class mColoringProblem
         return false;
      }
      
-     
-     
-      
-   
+        printSolution(color);
+        return true;
+
    }
-  
-  
-  
-  
-  
-  
+      
+    void printSolution(int color[])
+    {
+        System.out.println("Solution exists: following are the assigned colors");
+        for(int i = 0; i < V; i++)
+          System.out.println(" " + color[i] + " ");
+        System.out.println();
+    }
+    
+    
+    public static void main()
+
 }
