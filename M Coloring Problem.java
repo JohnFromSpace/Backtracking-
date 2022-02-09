@@ -68,6 +68,30 @@ public class mColoringProblem
     }
     
     
-    public static void main()
+    public static void main(String args[])
+    {
+        mColoringProblem Coloring = new mColoringProblem();
+      
+        /* Create following graph and
+           test whether it is
+           3 colorable
+          (3)---(2)
+           |   / |
+           |  /  |
+           | /   |
+          (0)---(1)
+        */
+      
+        int graph[][] = {
+          {0, 1, 1, 1},
+          {1, 0, 1, 0},
+          {1, 1, 0, 1},
+          {1, 0, 1, 0}
+        };
+        
+        int m = 3; // number of colors
+        Coloring.graphColoring(graph, m);  
+    
+    }
 
 }
