@@ -21,8 +21,21 @@ public class mColoringProblem
     //consider this vertex v and try different colours
     for(int c = 1; c <= m; c++)
     {
-      
+      if(isSafe(v, graph, color, c))
+      {
+        color[v] = c;
+          
+        //recur to assign colours to the rest of the vertices
+        if(graphColoringUtil(graph, m, color, v + 1))
+          return true;
+        
+        //if assignment of colour c does not work then remove it
+        color[v] = 0;
+      }
     }
+    
+    //if no color can be assigned to this vertex
+    return false;
   
   }
   
