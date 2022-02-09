@@ -39,6 +39,30 @@ public class mColoringProblem
   
   }
   
-
-
+   /*Note that there  may be more than one
+   solutions, this function prints one of the
+   feasible solutions.*/
+   boolean graphColoring(int graph[][], int m)
+   {
+     color = new int[V];
+     for(int i = 0; i < V; i++)
+       color[i] = 0;
+     
+     if(graphColoringUtil(graph, m, color, 0))
+     {
+        System.out.println("Solution does not exist.");
+        return false;
+     }
+     
+     
+     
+      
+   
+   }
+  
+  
+  
+  
+  
+  
 }
