@@ -90,17 +90,18 @@ class Graph():
     #Print solution
     g1.hamCycle();
     
+    ''' Let us create the following graph
+    (0)--(1)--(2)
+    |   /  \   |
+    |  /    \  |
+    | /      \ |
+    (3)       (4) '''
     
+    g2 = Graph(5)
+    g2.graph = [[0, 1, 0, 1, 0], [1, 0, 1, 1, 1],
+               [0, 1, 0, 0, 1], [1, 1, 0, 0, 0],
+               [0, 1, 1, 0, 0]]
     
+    #Print solution 
+    g2.hamCycle();  
     
-      
-     
-    
-      
-    
-    
-    
-
-
-
-
