@@ -20,7 +20,42 @@ class Graph():
     return True  
    
   #A recursive function that solves Hamiltonian Cycle Problem
-  def hamCycle(self, path, pos):
+  def hamCycleSolution(self, path, pos):
+    
+    #base case: if all vertices are included in the path
+    if pos == self.V:
+      #Last vertex must be adjacent to first vertex in order to create a cycle 
+      if self.graph[path[pos - 1]][path[0]] == 1:
+        return True
+      else:
+        return False
+      
+      
+   #Use different vertices as a next candidate in Hamiltonian Cycle.
+   #We don't try for 0 as we included 0 as starting point in hamCycle()
+    for v in range(1, self.V):
+      
+      if self.isSafe(v, pos, path):
+        
+        path[pos] = v
+        
+        if self.hamCycleSolution(path, pos + 1) == True:
+          return True
+        
+        #Remove current vertex if it does not lead to a solution
+        path[pos] = -1
+        
+    return False
+  
+  def hamCycle(self):
+    path = [-1] * self.V
+    
+    ''' Let us put vertex 0 as the first vertex
+    in the path. If there is a Hamiltonian Cycle,
+    then the path can be started from any point
+    of the cycle as the graph is undirected '''
+    
+    
     
       
     
