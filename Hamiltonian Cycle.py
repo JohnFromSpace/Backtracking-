@@ -70,7 +70,29 @@ class Graph():
     
     for vertex in path:
       print(vertex, end = " ")
-    print(path[0], "\n")  
+    print(path[0], "\n") 
+    
+    
+    #Main Code
+    
+    ''' Let us create the following graph
+    (0)--(1)--(2)
+    |   /  \   |
+    |  /    \  |
+    | /      \ |
+    (3)-------(4) '''
+    
+    g1 = Graph(5)
+    g1.graph = [ [0, 1, 0, 1, 0], [1, 0, 1, 1, 1],
+               [0, 1, 0, 0, 1], [1, 1, 0, 0, 1],
+               [0, 1, 1, 1, 0]]
+    
+    #Print solution
+    g1.hamCycle();
+    
+    
+    
+    
       
      
     
