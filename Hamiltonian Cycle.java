@@ -32,6 +32,30 @@ class HamiltonianCycle
   
   }
   
+  //A recursive function to solve the Hamiltonian Cycle Problem
+  boolean hamiltonianCycleSolution(int graph[][], int path[], int pos)
+  {
+    
+    //Base case: if all vertices are added in the Hamiltonian cycle
+    if(pos == V)
+    {
+      
+      //If there is an edge from the last added vertex to the first vertex
+      if(graph[path[pos - 1]][path[0]] == 1)
+        return true;
+      else
+        return false;
+      
+    }
+    
+  }
+  
+  
+  
+  
+  
+  
+  
   
 }
 
