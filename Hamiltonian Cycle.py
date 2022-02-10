@@ -55,7 +55,24 @@ class Graph():
     then the path can be started from any point
     of the cycle as the graph is undirected '''
     
+    path[0] = 0
     
+    if self.hamCycleSolution(path, 1) == False:
+      print("Solution does not exist.\n")
+      return False
+    
+    self.printSolution(path)
+    return True
+  
+  def printSolution(self, path):
+    
+    print("Solution exists: Following is one Hamiltonian Cycle")
+    
+    for vertex in path:
+      print(vertex, end = " ")
+    print(path[0], "\n")  
+      
+     
     
       
     
