@@ -142,15 +142,9 @@ class HamiltonianCycle
                       {0, 1, 1, 0, 0}};
     
     
-    
-    
-    
-  
+   //The solution is printed
+    hamiltonian.hamiltonianCycle(graph2);  
   }
-  
-  
-  
-  
-  
+ 
 }
 
