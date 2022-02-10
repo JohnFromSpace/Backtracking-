@@ -19,10 +19,16 @@ class HamiltonianCycle
   
   boolean isSafe(int v, int graph[][], int path[], int pos)
   {
-    //Check if this vertex is adjacent to the previously added vertex
+    //Check if this vertex is adjacent of the previously added vertex
     if(graph[path[pos - 1]][v] == 0)
       return false;
     
+    //Check if this vertex is already included. This step can be optimized by creating an array of size V.
+    for(int i = 0; i < V; i++)
+      if(path[i] == v)
+        return false;
+    
+    return true;
   
   }
   
