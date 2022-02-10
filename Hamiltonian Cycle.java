@@ -48,6 +48,30 @@ class HamiltonianCycle
       
     }
     
+    
+    //Try different vertices as a next candidate for Hamiltonian Cycle
+    //We skip 0 because it was already used for the start
+    for (int v = 1; v < V; v++)
+    {
+      //Check if the vertex can be added to the cycle
+      if(isSafe(v, graph, path, pos))
+      {
+        path[pos] = v;
+        
+        //Recur to construct the rest of the path
+        if(hamiltonianCycleSolution(graph, path, pos + 1) == true)
+          return true;
+        
+        //If adding vertex v doesn't lead to a solution, remove it
+        path[pos] = -1;
+        
+      }
+    
+    }
+    
+    //If no vertex can be added to the Hamiltonian Cycle constructed\
+    return false;
+    
   }
   
   
