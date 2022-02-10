@@ -74,8 +74,69 @@ class HamiltonianCycle
     
   }
   
+  int hamiltonianCycle(int graph[][])
+  {
+    path = new int[V];
+    for(int i = 0; i < V; i++)
+      path[i] = -1;
+    
+    /* Let us put vertex 0 as the first vertex in the path.
+    If there is a Hamiltonian Cycle, then the path can be
+    started from any point of the cycle as the graph is
+    undirected */
+    
+    path[0] = 0;
+    if(hamiltonianCycleSolution(graph, path, 1) == false)
+    {
+      System.out.println("\nSolution does not exist.\n");
+      return 0;
+    }
+    
+    printSolution(path);
+    return 1;
+    
+  }
   
   
+  void printSolution(int path[])
+  {
+    Syste.out.println("Solution exists: Following is one Hamiltonian Cycle");
+    
+    for(int i = 0; i < V; i++)
+      System.out.println(" " + path[0] + " ");
+    
+    //Print the first vertex again to show the complete cycle
+    System.out.println(" " + path[0] + " ");
+  }
+  
+  
+  //Main program
+  public static void main(String args[])
+  {
+    HamiltonianCycle hamiltonian = new HamiltonianCyle();
+    
+    /* Let us create the following graph
+           (0)--(1)--(2)
+            |   / \   |
+            |  /   \  |
+            | /     \ |
+           (3)-------(4)    */
+    
+    int graph1[][] = {{0, 1, 0, 1, 0},
+                      {1, 0, 1, 1, 1},
+                      {0, 1, 0, 0, 1},
+                      {1, 1, 0, 0, 1},
+                      {0, 1, 1, 1, 0}};
+    
+    /* Let us create the following graph
+           (0)--(1)--(2)
+            |   / \   |
+            |  /   \  |
+            | /     \ |
+           (3)       (4)    */
+    
+  
+  }
   
   
   
