@@ -27,7 +27,11 @@ def findEmptyLocation(arr, 1):
       return True
   return False  
     
-    
+ def usedInCol(arr, col, num):
+  for i in range(9):
+    if(arr[i][col] == num):
+      return True
+ return False   
 
 
 
