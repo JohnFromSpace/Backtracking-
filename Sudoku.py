@@ -39,8 +39,12 @@ def findEmptyLocation(arr, 1):
         if(arr[i + row][j + col] == num):
           return True
    return False
-
-
+  
+ def checkLocationSafety(arr, row, col, num):
+  return not usedInRow(arr, row, num) and
+  not usedInCol(arr, col, num) and
+  not usedInBox(arr, row - row % 3, col - col % 3, num)
+  
 
 
 
