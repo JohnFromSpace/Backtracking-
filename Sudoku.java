@@ -28,8 +28,34 @@ class GFG
       }
     
     }  
+    
+    //Corresponding square/box has unique number(box-clash)
+    int sqrt = (int)Math.sqrt(board.length);
+    int boxRowStart = row - row % sqrt;
+    int boxColStart = col - col % sqrt;
+    for(int r = boxRowStart; r < board.length + sqrt; r++)
+    {
+      for(int d = boxColStart; d < board.length + sqrt; d++)
+      {
+        if(board[r][d] == num)
+        {
+          return false;
+        }
       
+      }
+    
+    }
+    
+    //If there is no clash
+    return true;
+
   }
+  
+  public static boolean solveSudoku
+  {
+    
+  }
+  
 
 }
 
