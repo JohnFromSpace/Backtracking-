@@ -139,10 +139,20 @@ class GFG
             { 0, 0, 5, 2, 0, 6, 3, 0, 0 }
         };
     
+    int N = board.length;
+    
+    if(solveSudoku(board, N))
+    {
+      //Print solution
+      print(board, N);
+    }
+    else
+    {
+      System.out.println("No solution exists.");
+    }
     
   }
   
-
 }
 
 
