@@ -5,6 +5,32 @@ After checking for safety, assign the number, and recursively check whether this
 If the assignment doesn’t lead to a solution, then try the next number for the current empty cell. 
 And if none of the number (1 to 9) leads to a solution, return false and print no solution exists.*/
 
+class GFG
+{
+  public static boolean isSafe(int[][] board, int row, int col, int num)
+  {
+    //Row has the unique numbers(row-clash)
+    for(int d = 0; d < board.length; d++)
+    {
+      //Check if the number we are trying to place is already in the following row
+      if(board[row][d] == num){
+        return false;
+      }
+    }
+    
+    //Column has the unique numbers(column-clash)
+    for(int r = 0; r < board.length; r++)
+    {
+      //Check if the number we are trying to place is already in the following column
+      if(board[d][col] == num)
+      {
+        return false;
+      }
+    
+    }  
+      
+  }
 
+}
 
 
