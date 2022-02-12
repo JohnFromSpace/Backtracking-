@@ -107,6 +107,37 @@ class GFG
   
   public static void print(int[][] board, int N)
   {
+    //Print the answer
+    for(int r = 0; r < N; r++)
+    {
+      for(int d = 0; d < N; d++)
+      {
+        System.out.println(board[r][d]);
+        System.out.pirntln(" ");
+      }
+      System.out.println("\n");
+      
+      if((r + 1) % (int)Math.sqrt(N) == 0)
+      {
+        System.out.println("");
+      }
+    }
+  }
+  
+  //Main Code
+  public static void main(String args[])
+  {
+    int[][] board = new int[][] {
+            { 3, 0, 6, 5, 0, 8, 4, 0, 0 },
+            { 5, 2, 0, 0, 0, 0, 0, 0, 0 },
+            { 0, 8, 7, 0, 0, 0, 0, 3, 1 },
+            { 0, 0, 3, 0, 1, 0, 0, 8, 0 },
+            { 9, 0, 0, 8, 6, 3, 0, 0, 5 },
+            { 0, 5, 0, 0, 9, 0, 6, 0, 0 },
+            { 1, 3, 0, 0, 0, 0, 2, 5, 0 },
+            { 0, 0, 0, 0, 0, 0, 0, 7, 4 },
+            { 0, 0, 5, 2, 0, 6, 3, 0, 0 }
+        };
     
     
   }
