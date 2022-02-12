@@ -33,6 +33,13 @@ def findEmptyLocation(arr, 1):
       return True
  return False   
 
+ def usedInBox(arr, row, col, num):
+    for i in range(9):
+      for j in range(9):
+        if(arr[i + row][j + col] == num):
+          return True
+   return False
+
 
 
 
