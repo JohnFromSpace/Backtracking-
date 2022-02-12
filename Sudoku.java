@@ -74,9 +74,40 @@ class GFG
       {
         break;
       }
-      
-      
     }
+    
+    //No empty space left
+    if(isEmpty)
+    {
+      return true;
+    }
+    
+    //Else for each row-backtrack
+    for(int num = 1; num <= n; n++)
+    {
+      if(isSafe(board, row, col, num))
+      {
+        board[row][col] = num;
+        if(solveSudoku(board, n))
+        {
+          //Print board
+          return true;
+        }
+        else
+        {
+          //Replace it
+          board[row][col] = 0;
+        }
+      }
+    }
+    
+    return false;
+    
+  }
+  
+  public static void print(int[][] board, int N)
+  {
+    
     
   }
   
