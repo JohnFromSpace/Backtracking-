@@ -45,8 +45,42 @@ def findEmptyLocation(arr, 1):
   not usedInCol(arr, col, num) and
   not usedInBox(arr, row - row % 3, col - col % 3, num)
   
-
-
+ def solveSudoku(arr):
+    # 'l' is a list variable that keeps the
+    # record of row and col in
+    # find_empty_location Function
+    l = [0, 0]
+    
+    #if there is no assigned location 
+    if(not findEmptyLocation(arr, l)):
+      return True
+    
+    #assigning  list values from the function above
+    row = l[0]
+    col = l[0]
+    
+    #consider digits 1 to 9
+    for num in range(1, 10):
+      
+      if(checkLocationIsSafe(arr, row, col, num)):
+        # make tentative assignment
+        arr[row][col] = num
+        
+        if(solveSudoku(arr)):
+          return True
+        
+        #upon failure 
+        arr[row][col] = 0
+        
+    #backtracking
+    return False
+  
+  
+      
+    
+    
+    
+  
 
 
 
