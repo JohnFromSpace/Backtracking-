@@ -51,8 +51,32 @@ class GFG
 
   }
   
-  public static boolean solveSudoku
+  public static boolean solveSudoku(int[][] board, int n)
   {
+    int row = -1;
+    int col = -1;
+    boolean isEmpty = true;
+    for(int i = 0; i < n; i++)
+    {
+      for(int j = 0; j < n; j++)
+      {
+        if(board[i][j] == 0)
+        {
+          row = i;
+          col = j;
+          
+          //There are still some remaining missing values 
+          isEmpty = false;
+          break;
+        }
+      }
+      if(!isEmpty)
+      {
+        break;
+      }
+      
+      
+    }
     
   }
   
