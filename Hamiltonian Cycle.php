@@ -26,3 +26,41 @@ function isSafe($v, $graph, &$path, $pos)
   return true;
   
 }
+
+/* A recursive utility function
+to solve hamiltonian cycle problem */
+function hamiltonianCycleSolution($graph, &$path, $pos)
+{
+  global $V;
+  
+  /* base case: If all vertices are included in
+    Hamiltonian Cycle */
+  if($pos == $V)
+  {
+    // And if there is an edge from the
+    // last included vertex to the first vertex
+    if($graph[$path[$pos - 1]][$path[0]] == 1)
+      return true;
+    else
+      return false;
+  }
+  
+  // Try different vertices as a next candidate in
+  // Hamiltonian Cycle. We don't try for 0 as we
+  // included 0 as starting point hamCycle()
+  
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+?>
