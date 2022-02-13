@@ -133,14 +133,19 @@ $graph1 = array(array(0, 1, 0, 1, 0),
 hamCycle($graph1);
 
 
-
-
-
-
-
-
-
-
-
+/* Let us create the following graph
+(0)--(1)--(2)
+ |   / \   |
+ |  /   \  |
+ | /     \ |
+(3)-------(4) */
+$graph2 = array(array(0, 1, 0, 1, 0),
+                array(1, 0, 1, 1, 1),
+                array(0, 1, 0, 0, 1),
+                array(1, 1, 0, 0, 0),
+                array(0, 1, 1, 0, 0));
+ 
+// Print the solution
+hamCycle($graph2);
 
 ?>
