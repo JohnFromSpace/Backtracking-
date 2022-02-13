@@ -102,7 +102,15 @@ function hamCycle($graph)
   return 1;
 }
 
+//A utility function to print solution
+function printSolution($path)
+{
+  global $V;
+  echo("Solution exists: following is one hamiltonian cycle.\n");
+  for($i = 0; $i < $V; $i++)
+    echo(" ".$path[0]." \n");
 
+}
 
 
 
