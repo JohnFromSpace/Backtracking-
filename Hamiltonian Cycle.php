@@ -87,9 +87,23 @@ function hamCycle($graph)
   for($i = 0; $i < $V; $i++)
     $path[$i] = -1;
   
+  /* Let us put vertex 0 as the first vertex in the path.
+    If there is a Hamiltonian Cycle, then the path can be
+    started from any point of the cycle as the graph is
+    undirected */
+  $path[0] = 0;
+  if(hamiltonianCycleUtility($graph, $path, 1) == false)
+  {
+    echo("\nSolution does not exist.");
+    return 0;
+  }
   
-
+  printSolution($path);
+  return 1;
 }
+
+
+
 
 
 
