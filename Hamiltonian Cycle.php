@@ -121,6 +121,17 @@ function printSolution($path)
  | /     \ |
 (3)-------(4) */
 
+$graph1 = array(array(0, 1, 0, 1, 0),
+    array(1, 0, 1, 1, 1),
+    array(0, 1, 0, 0, 1),
+    array(1, 1, 0, 0, 1),
+    array(0, 1, 1, 1, 0),
+);
+
+
+//Print the solution
+hamCycle($graph1);
+
 
 
 
