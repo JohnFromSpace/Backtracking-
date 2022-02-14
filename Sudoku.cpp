@@ -34,6 +34,42 @@ bool FindUnassignedLocation(int grid[N][N], int& row, int& col);
 //Checks whether it will be legal to assign num to given row, col
 bool isSafe(int grid[N][N], int row, int col, int num);
 
+/* Takes a partially filled-in grid and attempts
+to assign values to all unassigned locations in
+such a way to meet the requirements for
+Sudoku solution (non-duplication across rows,
+columns, and boxes) */
+bool SolveSudoku(int grid[N][N])
+{
+  int row, col;
+  
+  //If there is no unassigned location, we are done
+  if(!FindUnassignedLocation(grid, row, col))
+    return true;
+  
+  //Consider digits 1 to 9
+  for(int i = 1; i <= 9; i++)
+  {
+    if(isSafe(grid, row, col, num))
+    {
+      //Make tentative assignment
+      grid[row][col] = num;
+      
+      //Return, if success
+      if(SolveSudoku(grid))
+        return true;
+      
+      //Failure, make it unassigned and try once again
+      grid[row][col] = UNASSIGNED;
+      
+    }
+  
+  }
+  
+  //Backtracking
+  return false;
+}
+
 
 
 
