@@ -108,6 +108,18 @@ bool UsedInCol(int grid[N][N], int col, int num)
   return false;
 }
 
+/* Returns a boolean which indicates whether
+an assigned entry within the specified 3x3 box
+matches the given number. */
+bool UsedInBox(int grid[N][N], int boxStartRow, int boxStartCol, int num)
+{
+  for(int row = 0; row < 3; row++)
+    for(int col = 0; col < 3; col++)
+      if(grid[row + boxSartRow][col + boxStartCol] == num)
+        return true;
+  return false;
+}
+
 
 
 
