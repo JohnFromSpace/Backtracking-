@@ -102,7 +102,7 @@ an assigned entry in the specified column
 matches the given number. */
 bool UsedInCol(int grid[N][N], int col, int num)
 {
-  for(int col = 0; col < N; col++)
+  for(int row = 0; row < N; row++)
     if(grid[row][col] == num)
       return true;
   return false;
