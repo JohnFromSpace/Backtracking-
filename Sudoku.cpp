@@ -120,7 +120,16 @@ bool UsedInBox(int grid[N][N], int boxStartRow, int boxStartCol, int num)
   return false;
 }
 
-
+/* Returns a boolean which indicates whether
+it will be legal to assign num to the given
+row, col location. */
+bool isSafe(int grid[N][N], int row, int col, int num)
+{
+  /* Check if 'num' is not already placed in
+  current row, current column
+  and current 3x3 box */
+  return !UsedInRow(grid, row, num) && !UsedInCol(grid, col, num) && !UsedInBox(grid, row - row % 3, col - col % 3, num) && grid[row][col] == UNASSIGNED;
+}
 
 
 
