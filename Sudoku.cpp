@@ -97,6 +97,17 @@ bool UsedInRow(int grid[N][N], int row, int num)
   return false;
 }
 
+/* Returns a boolean which indicates whether
+an assigned entry in the specified column
+matches the given number. */
+bool UsedInCol(int grid[N][N], int col, int num)
+{
+  for(int col = 0; col < N; col++)
+    if(grid[row][col] == num)
+      return true;
+  return false;
+}
+
 
 
 
