@@ -18,4 +18,32 @@ If any recursive call returns true, end the loop and return true.
 If no recursive call returns true then return false.
 If there is no unassigned location then return true.*/
 
+#include <bits/stdc++.h>
+using namespace std;
+
+//UNASSIGNED is used for empty cells in sudoku grid
+#define UNASSIGNED 0
+
+//N is size of sudoku grid
+//Size will be NxN
+#define N 9
+
+//Finds an entry grid that is still unassigned
+bool FindUnassignedLocation(int grid[N][N], int& row, int& col);
+
+//Checks whether it will be legal to assign num to given row, col
+bool isSafe(int grid[N][N], int row, int col, int num);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
