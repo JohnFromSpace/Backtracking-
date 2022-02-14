@@ -86,6 +86,17 @@ bool FindUnassignedLocation(int grid[N][N], int& row, int& col)
   return false;
 }
 
+/* Returns a boolean which indicates whether
+an assigned entry in the specified row matches
+the given number. */
+bool UsedInRow(int grid[N][N], int row, int num)
+{
+  for(int col = 0; col < N; col++)
+    if(grid[row][col] == num)
+      return true;
+  return false;
+}
+
 
 
 
