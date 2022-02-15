@@ -131,7 +131,19 @@ bool isSafe(int grid[N][N], int row, int col, int num)
   return !UsedInRow(grid, row, num) && !UsedInCol(grid, col, num) && !UsedInBox(grid, row - row % 3, col - col % 3, num) && grid[row][col] == UNASSIGNED;
 }
 
+/* A utility function to print grid */
+void PrintGrid(int grid[N][N])
+{
+  for(int row = 0; row < N; row++)
+  {
+    for(int col = 0; col < N; col++)
+    {
+      cout << grid[row][col] << " ";
+    }
+    cout << endl;
+  }
 
+}
 
 
 
