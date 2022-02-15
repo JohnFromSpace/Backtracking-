@@ -132,7 +132,7 @@ bool isSafe(int grid[N][N], int row, int col, int num)
 }
 
 /* A utility function to print grid */
-void PrintGrid(int grid[N][N])
+void printGrid(int grid[N][N])
 {
   for(int row = 0; row < N; row++)
   {
@@ -157,6 +157,11 @@ int main()
                        { 1, 3, 0, 0, 0, 0, 2, 5, 0 },
                        { 0, 0, 0, 0, 0, 0, 0, 7, 4 },
                        { 0, 0, 5, 2, 0, 6, 3, 0, 0 } };
+  
+  if(SolveSudoku(grid) == true)
+    printGrid(grid);
+  else
+    cout << "No solution exists.";
   
   return 0;
 }
