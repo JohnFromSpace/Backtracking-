@@ -1,4 +1,4 @@
-# Problems with Theme
+# Backtracking
 
 ## How to determine if a problem can be solved using Backtracking?
 
