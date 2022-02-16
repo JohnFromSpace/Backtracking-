@@ -6,7 +6,7 @@ Generally, every constraint satisfaction problem which has clear and well-define
 </br></br>
 Consider a situation that you have three boxes in front of you and only one of them has a gold coin in it but you do not know which one. So, in order to get the coin, you will have to open all of the boxes one by one. You will first check the first box, if it does not contain the coin, you will have to close it and check the second box and so on until you find the coin. This is what backtracking is, that is solving all sub-problems one by one in order to reach the best possible solution.  
 
-**All solved using backtracking**
+## Problems
 1. N Queen Problem 
 2. The Knight's Tour Problem 
 3. Rat In A Maze
