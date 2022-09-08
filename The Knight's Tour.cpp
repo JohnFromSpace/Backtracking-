@@ -1,5 +1,5 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <iostream>
+#include <iomanip>
 
 #define N 8
 
@@ -15,8 +15,8 @@ int isSafe(int x, int y, int sol[N][N]){
 void printSolution(int sol[N][N]){
   for(int x = 0; x < N; x++){
     for(int y = 0; y < N; y++)
-        cout << " " << setw(2) << sol[x][y] << " ";
-      cout << endl;
+        std::cout << " " << setw(2) << sol[x][y] << " ";
+      std::cout << std::endl;
   
   }
   
@@ -48,7 +48,7 @@ int solveKT(){
   sol[0][0] = 0;
   
   if(solveKTUtil(0, 0, 1, sol, xMove, yMove) == 0){
-    cout << "Solution does not exist";
+    std::cout << "Solution does not exist";
     return 0;
   }
   else{
@@ -91,12 +91,3 @@ int main(){
    solveKT();
   return 0;
 }
-  
-
-
-
-
-
-
-
-
