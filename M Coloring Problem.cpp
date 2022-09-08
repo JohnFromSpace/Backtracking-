@@ -73,7 +73,7 @@ void printSolution(int color[]){
     std::cout << " " << color[i] << " ";
   }
   
-  cout << "\n";
+  std::cout << "\n";
   
 }      
   
@@ -96,8 +96,4 @@ int main(){
   int m = 3;
   graphColoring(graph, m);
   return 0;
-}      
-      
-
-
-
+}
