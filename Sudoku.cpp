@@ -18,8 +18,7 @@ If any recursive call returns true, end the loop and return true.
 If no recursive call returns true then return false.
 If there is no unassigned location then return true.*/
 
-#include <bits/stdc++.h>
-using namespace std;
+#include <iostream>
 
 //UNASSIGNED is used for empty cells in sudoku grid
 #define UNASSIGNED 0
@@ -138,9 +137,9 @@ void printGrid(int grid[N][N])
   {
     for(int col = 0; col < N; col++)
     {
-      cout << grid[row][col] << " ";
+      std::cout << grid[row][col] << " ";
     }
-    cout << endl;
+    std::cout << std::endl;
   }
 
 }
@@ -161,7 +160,7 @@ int main()
   if(SolveSudoku(grid) == true)
     printGrid(grid);
   else
-    cout << "No solution exists.";
+    std::cout << "No solution exists.";
   
   return 0;
 }
