@@ -8,7 +8,6 @@ If no assignment of color is possible then backtrack and return false.*/
 
 
 #include <iostream>
-using namespace std;
 
 #define V 4
 
@@ -58,7 +57,7 @@ bool graphColoring(bool graph[V][V], int m){
   }
   
   if(graphColorUtil(graph, m, color, 0) == false){
-    cout << "Solution does not exist.";
+    std::cout << "Solution does not exist.";
     return false;
   }
   
@@ -68,10 +67,10 @@ bool graphColoring(bool graph[V][V], int m){
       
 void printSolution(int color[]){
   
-  cout << "Solution Exists: " << "Following are assigned colors" << "\n";
+  std::cout << "Solution Exists: " << "Following are assigned colors" << "\n";
   
   for(int i = 0; i < V; i++){
-    cout << " " << color[i] << " ";
+    std::cout << " " << color[i] << " ";
   }
   
   cout << "\n";
