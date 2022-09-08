@@ -1,5 +1,5 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <iostream>
+#include <cstdlib>
 
 #define ARRAYSIZE(a) (sizeof(a)/sizeof(a[0]))
 static int total_nodes
@@ -7,9 +7,9 @@ static int total_nodes
 //Prints subset found
 void printSubset(int A[], int size){
   for(int i = 0; i < size; i++){
-    cout << " " << A[i]; 
+    std::cout << " " << A[i]; 
   }
-  cout << "\n";
+  std::cout << "\n";
 }
 
 //Qsort compare function
@@ -87,32 +87,7 @@ int main(){
   int target 53;
   int size = ARRAYSIZE(weights);
   generateSubsets(weights, size, target);
-  cout << "Nodes generated: " << total_nodes;
+  std::cout << "Nodes generated: " << total_nodes;
   
   return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
